@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FRP Bypass Pro | Professional Android Quick Access Tools</title>
+    <meta name="description" content="Professional Android Quick Access Tools - Updated 2025 - All Devices">
+    <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22FRP%20Bypass%20Pro%22,%22short_name%22:%22FRP%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%230f0f1e%22,%22theme_color%22:%22%2300ffaa%22,%22icons%22:[{%22src%22:%22data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect fill='%2300ffaa' width='192' height='192'/%3E%3Ctext fill='%23000' font-size='80' x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-weight='bold'%3EFRP%3C/text%3E%3C/svg%3E%22,%22sizes%22:%22192x192%22,%22type%22:%22image/svg+xml%22}]}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Inter:wght@500;700&display=swap');
+        
+        :root {
+            --primary: #00ffaa;
+            --primary-dark: #00cc88;
+            --primary-glow: rgba(0, 255, 170, 0.15);
+            --bg: #0d0d1c;
+            --bg-gradient: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+            --card: rgba(25, 30, 55, 0.95);
+            --border: rgba(0, 255, 170, 0.2);
+            --warning: rgba(255, 51, 102, 0.25);
+            --warning-border: #ff3366;
+        }
+        
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            -webkit-tap-highlight-color: transparent; 
+        }
+        
+        body { 
+            background: var(--bg-gradient);
+            color: #eee; 
+            font-family: 'Inter', sans-serif;
+            min-height: 100dvh;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) calc(env(safe-area-inset-bottom) + 80px) env(safe-area-inset-left);
+            overflow-x: hidden;
+        }
+        
+        header { 
+            text-align: center; 
+            padding: min(8vh, 50px) 5vw min(5vh, 35px);
+        }
+        
+        h1 { 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: clamp(2.2rem, 9vw, 4rem); 
+            color: var(--primary); 
+            text-shadow: 0 0 30px var(--primary), 0 0 60px rgba(0, 255, 170, 0.3);
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+        
+        .tagline { 
+            font-size: clamp(1rem, 3.8vw, 1.3rem); 
+            margin: 10px 0 6px; 
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .updated { 
+            font-size: clamp(0.9rem, 3.2vw, 1.1rem); 
+            color: #00ff88; 
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+        
+        .notice { 
+            margin: 15px 5vw 25px; 
+            padding: 18px 22px; 
+            background: var(--warning);
+            border: 2px solid var(--warning-border); 
+            border-radius: 16px; 
+            font-size: clamp(0.9rem, 3.5vw, 1.05rem); 
+            text-align: center;
+            line-height: 1.6;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(255, 51, 102, 0.15);
+        }
+        
+        .cards { 
+            padding: 0 4vw 20px;
+            display: grid;
+            gap: clamp(18px, 4vw, 28px);
+            grid-template-columns: 1fr;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: var(--card);
+            border-radius: 24px;
+            padding: clamp(20px, 5vw, 28px);
+            border: 2px solid var(--border);
+            box-shadow: 0 10px 40px var(--primary-glow);
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .card:active {
+            transform: scale(0.98);
+        }
+        
+        .card h3 {
+            text-align: center;
+            font-size: clamp(1.4rem, 4.8vw, 1.9rem);
+            color: var(--primary);
+            margin-bottom: clamp(16px, 4vw, 22px);
+            text-shadow: 0 0 15px rgba(0, 255, 170, 0.5);
+            font-weight: 800;
+            letter-spacing: 0.01em;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: clamp(18px, 5vw, 24px) clamp(16px, 4vw, 22px);
+            margin: 10px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #000;
+            font-weight: 700;
+            font-size: clamp(1.1rem, 4.2vw, 1.4rem);
+            text-align: center;
+            border-radius: 16px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0, 255, 170, 0.4);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 64px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        .btn:active {
+            transform: scale(0.97);
+            box-shadow: 0 4px 15px rgba(0, 255, 170, 0.35);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px 20px 35px;
+            font-size: clamp(0.8rem, 2.8vw, 0.9rem);
+            color: #666;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, var(--bg) 70%, transparent 100%);
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .btn:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card {
+            animation: fadeInUp 0.4s ease backwards;
+        }
+        
+        .card:nth-child(1) { animation-delay: 0.05s; }
+        .card:nth-child(2) { animation-delay: 0.1s; }
+        .card:nth-child(3) { animation-delay: 0.15s; }
+        .card:nth-child(4) { animation-delay: 0.2s; }
+        .card:nth-child(5) { animation-delay: 0.25s; }
+        .card:nth-child(6) { animation-delay: 0.3s; }
+        .card:nth-child(7) { animation-delay: 0.35s; }
+        .card:nth-child(8) { animation-delay: 0.4s; }
+        .card:nth-child(9) { animation-delay: 0.45s; }
+        .card:nth-child(10) { animation-delay: 0.5s; }
+        .card:nth-child(11) { animation-delay: 0.55s; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🔓 FRP Bypass Pro</h1>
+    <div class="tagline">Professional Android Quick Access Tools</div>
+    <div class="updated">Updated 2025 | All Devices</div>
+</header>
+
+<div class="notice">
+    ⚠️ LEGAL NOTICE: These tools are for authorized device owners only. Only use on devices you own or have explicit permission to access.
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>📧 Google Services</h3>
+        <a href="https://mail.google.com" class="btn">📧 Gmail</a>
+        <a href="intent:#Intent;package=com.google.android.gm;end" class="btn">📨 Gmail App</a>
+        <a href="https://maps.google.com" class="btn">🗺️ Google Maps</a>
+        <a href="intent:#Intent;package=com.google.android.apps.maps;end" class="btn">🌍 Google Maps App</a>
+        <a href="https://www.google.com" class="btn">🔍 Google Search</a>
+        <a href="https://support.google.com" class="btn">❓ Google Help</a>
+        <a href="https://accounts.google.com" class="btn">👤 Google Login</a>
+        <a href="intent:#Intent;action=android.intent.action.VOICE_COMMAND;end" class="btn">🎤 Google Assistant</a>
+        <a href="https://www.youtube.com" class="btn">▶️ YouTube</a>
+    </div>
+
+    <div class="card">
+        <h3>⚙️ System Settings</h3>
+        <a href="intent:#Intent;action=android.settings.SETTINGS;end" class="btn">⚙️ Settings</a>
+        <a href="intent:#Intent;component=com.android.settings/.Settings$DevelopmentSettingsDashboardActivity;end" class="btn">🔧 Hidden Settings</a>
+        <a href="intent:#Intent;action=android.settings.SECURITY_SETTINGS;end" class="btn">🔒 Set Lock Screen</a>
+        <a href="intent:#Intent;action=android.settings.USAGE_ACCESS_SETTINGS;end" class="btn">📊 Activity Manager</a>
+    </div>
+
+    <div class="card">
+        <h3>🌐 Browsers</h3>
+        <a href="googlechrome://navigate?url=https://google.com" class="btn">🌐 Chrome</a>
+        <a href="intent:#Intent;package=com.android.chrome;end" class="btn">🌐 Chrome App</a>
+        <a href="intent:#Intent;package=com.sec.android.app.sbrowser;end" class="btn">🌐 Samsung Internet</a>
+    </div>
+
+    <div class="card">
+        <h3>📱 Samsung Apps</h3>
+        <a href="samsungapps://" class="btn">🏪 Galaxy Store</a>
+        <a href="https://galaxystore.samsung.com" class="btn">🛒 Galaxy Store Web</a>
+        <a href="intent:#Intent;component=com.sec.android.app.myfiles/.MainActivity;end" class="btn">📁 My Files</a>
+        <a href="intent:#Intent;package=com.samsung.knox.securefolder;end" class="btn">🔐 Secure Folder</a>
+        <a href="intent:#Intent;package=com.sec.android.easyMover;end" class="btn">📲 Smart Switch</a>
+        <a href="samsungapps://ProductDetail/com.wssyncmldm" class="btn">🛠️ Samsung Service</a>
+    </div>
+
+    <div class="card">
+        <h3>🏠 Home Launcher</h3>
+        <a href="intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.HOME;end" class="btn">🏠 Home Launcher</a>
+        <a href="intent:#Intent;package=com.sec.android.app.launcher;end" class="btn">🎨 Samsung Launcher</a>
+    </div>
+
+    <div class="card">
+        <h3>📂 File Managers</h3>
+        <a href="intent:#Intent;package=com.mi.android.globalFileexplorer;end" class="btn">📂 Mi File Manager</a>
+        <a href="intent:#Intent;package=com.estrongs.android.pop;end" class="btn">📁 ES File Explorer</a>
+        <a href="intent:#Intent;package=com.google.android.documentsui;end" class="btn">📁 Files by Google</a>
+    </div>
+
+    <div class="card">
+        <h3>🔧 Utilities</h3>
+        <a href="intent:#Intent;action=com.google.zxing.client.android.SCAN;end" class="btn">📷 QR Scanner</a>
+        <a href="intent:#Intent;package=com.android.calculator2;end" class="btn">🔢 Calculator</a>
+        <a href="samsungapps://ProductDetail/com.rrivenllc.shieldx" class="btn">🛡️ Alliance Shield X</a>
+    </div>
+
+    <div class="card">
+        <h3>📞 Dialer & Secret Codes</h3>
+        <a href="tel:" class="btn">📞 Dial Pad</a>
+        <a href="tel:*%230*%23" class="btn">🔓 *#0*# (Test Menu)</a>
+        <a href="tel:*%2385%23" class="btn">🔑 *#85# (Tecno/Infinix)</a>
+        <a href="tel:*%23*%234636%23*%23" class="btn">📱 *#*#4636#*#* (Phone Info)</a>
+        <a href="tel:*%2306%23" class="btn">📲 *#06# (IMEI)</a>
+        <a href="intent:#Intent;package=com.android.dialer;end" class="btn">☎️ Samsung Dialer</a>
+    </div>
+
+    <div class="card">
+        <h3>🔐 Account Management</h3>
+        <a href="intent:#Intent;component=com.google.android.gms/.auth.uiflows.addaccount.AddAccountActivity;end" class="btn">➕ Add Google Account</a>
+        <a href="https://accounts.google.com/signin/recovery" class="btn">🔑 Password Recovery</a>
+        <a href="https://myaccount.google.com" class="btn">👤 Manage Account</a>
+        <a href="intent:#Intent;action=android.settings.SYNC_SETTINGS;end" class="btn">🔄 Sync Settings</a>
+    </div>
+
+    <div class="card">
+        <h3>🛠️ Advanced Access</h3>
+        <a href="intent:#Intent;action=android.settings.APPLICATION_SETTINGS;end" class="btn">📱 App Manager</a>
+        <a href="intent:#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;end" class="btn">♿ Accessibility</a>
+        <a href="intent:#Intent;action=android.settings.BACKUP_AND_RESET_SETTINGS;end" class="btn">🔄 Backup & Reset</a>
+        <a href="intent:#Intent;action=android.settings.DEVICE_INFO_SETTINGS;end" class="btn">ℹ️ About Phone</a>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Quick Actions</h3>
+        <a href="intent:#Intent;package=com.android.vending;end" class="btn">🏪 Play Store</a>
+        <a href="https://www.google.com/android/find" class="btn">📍 Find My Device</a>
+        <a href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end" class="btn">📶 WiFi Settings</a>
+        <a href="intent:#Intent;action=android.settings.DISPLAY_SETTINGS;end" class="btn">🖥️ Display Settings</a>
+    </div>
+
+</div>
+
+<footer>
+    FRP Bypass Pro | Professional Android Access Tools<br>
+    For educational and authorized use only | Updated December 2025<br>
+    ⚡ Built with precision for technicians and device owners
+</footer>
+
+</body>
+</html>
